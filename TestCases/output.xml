@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-27T09:46:54.356984" rpa="false" schemaversion="5">
+<suite id="s1" name="Test validAddStockItem" source="D:\Pilot Project\Pilot_Project_Smart_hospital_Team3\TestCases\Test_validAddStockItem.robot">
+<test id="s1-t1" name="To verify successful addition of stock item" line="15">
+<kw name="Open the browser with url" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:46:54.683436" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-27T09:46:54.683436" elapsed="3.371125"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:46:58.057843" level="INFO">Opening url 'https://demo.smart-hospital.in/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-27T09:46:58.054561" elapsed="5.376957"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-27T09:47:03.432018" elapsed="0.090429"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-27T09:47:03.522447" elapsed="0.005489"/>
+</kw>
+<status status="PASS" start="2024-05-27T09:46:54.683436" elapsed="8.845000"/>
+</kw>
+<kw name="Go to user login" owner="LoginResources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:47:03.533271" level="INFO">Clicking link '//ul[@class="top-right"]//a'.</msg>
+<arg>${User_login_button}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T09:47:03.532082" elapsed="3.629890"/>
+</kw>
+<status status="PASS" start="2024-05-27T09:47:03.530929" elapsed="3.631542"/>
+</kw>
+<kw name="Go to admin page" owner="LoginResources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:47:07.163472" level="INFO">Clicking link '//a[text()=" Admin Login"]'.</msg>
+<arg>${admin_login_page_btn}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T09:47:07.163472" elapsed="0.422552"/>
+</kw>
+<status status="PASS" start="2024-05-27T09:47:07.163472" elapsed="0.423052"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>new</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-27T09:47:07.589255" elapsed="0.059819"/>
+</kw>
+<kw name="fill the admin login form" owner="LoginResources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:47:07.649074" level="INFO">Clicking link '//i[@class="fa fa-user ispace"]//parent::a'.</msg>
+<arg>${admin_login_btn}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T09:47:07.649074" elapsed="0.899736"/>
+</kw>
+<status status="PASS" start="2024-05-27T09:47:07.649074" elapsed="0.901600"/>
+</kw>
+<kw name="click the sign in button" owner="LoginResources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:47:08.554136" level="INFO">Clicking button 'xpath://div[@class="form-bottom"]//button'.</msg>
+<arg>${sigin_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T09:47:08.551492" elapsed="6.199868"/>
+</kw>
+<status status="PASS" start="2024-05-27T09:47:08.551492" elapsed="6.200368"/>
+</kw>
+<kw name="Click the inventory button" owner="AdminResources">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${inventory}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-05-27T09:47:14.753402" elapsed="0.359571"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:47:15.112973" level="INFO">Clicking link '//i[@class="fas fa-luggage-cart"]//parent::a'.</msg>
+<arg>${inventory}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T09:47:15.112973" elapsed="0.921957"/>
+</kw>
+<status status="PASS" start="2024-05-27T09:47:14.753402" elapsed="1.281528"/>
+</kw>
+<kw name="Verify item stock list page opened" owner="AdminResources">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:47:16.039500" level="INFO">Verifying element '//div[@class="box-header ptbnull"]//h3' contains exact text 'Item Stock List'.</msg>
+<arg>${item_stockList}</arg>
+<arg>Item Stock List</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-27T09:47:16.034930" elapsed="0.074348"/>
+</kw>
+<status status="PASS" start="2024-05-27T09:47:16.034930" elapsed="0.074849"/>
+</kw>
+<kw name="Click add stock item" owner="AdminResources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:47:16.112528" level="INFO">Clicking link '//a[@class="btn btn-primary btn-sm additemstock"]'.</msg>
+<arg>${add_item_stock}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T09:47:16.112031" elapsed="0.516120"/>
+</kw>
+<status status="PASS" start="2024-05-27T09:47:16.111529" elapsed="0.518504"/>
+</kw>
+<kw name="Fill add item stock form" owner="AdminResources">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:47:16.630531" level="INFO">Selecting options from selection list '(//div[@class="form-group"])[1]//select[@name="item_category_id"]' by label Medical Equipment.</msg>
+<arg>${item_category}</arg>
+<arg>Medical Equipment</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-27T09:47:16.630531" elapsed="0.300149"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:47:16.930680" level="INFO">Selecting options from selection list '(//div[@class="form-group"])[3]//select[@name="supplier_id"]' by label Quick Service.</msg>
+<arg>${supplier}</arg>
+<arg>Quick Service</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-27T09:47:16.930680" elapsed="0.123454"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:47:17.054134" level="INFO">Typing text '10' into text field '(//input[@class="form-control miplusinput"])[1]'.</msg>
+<arg>${quantity}</arg>
+<arg>10</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T09:47:17.054134" elapsed="0.487140"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:47:17.544760" level="INFO">Selecting options from selection list '(//div[@class="form-group"])[2]//select[@name="item_id"]' by label Syringe Pump.</msg>
+<arg>${item}</arg>
+<arg>Syringe Pump</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-27T09:47:17.544186" elapsed="0.186606"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:47:17.732244" level="INFO">Selecting options from selection list '(//div[@class="form-group"])[4]//select[@name="store_id"]' by label Vinay Pharmacy.</msg>
+<arg>${store}</arg>
+<arg>Vinay Pharmacy</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-05-27T09:47:17.731543" elapsed="0.182157"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:47:17.914249" level="INFO">Typing text '3' into text field '(//input[@class="form-control miplusinput"])[1]'.</msg>
+<arg>${quantity}</arg>
+<arg>3</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-27T09:47:17.914249" elapsed="0.271549"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-27T09:47:18.188525" level="INFO">Typing text '50' into text field '//input[@class="c"]'.</msg>
+<msg time="2024-05-27T09:47:23.427361" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-27T09:47:23.427361" level="FAIL">Element with locator '//input[@class="c"]' not found.</msg>
+<arg>${puchase_price}</arg>
+<arg>text=50</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-05-27T09:47:18.185798" elapsed="5.254945">Element with locator '//input[@class="c"]' not found.</status>
+</kw>
+<status status="FAIL" start="2024-05-27T09:47:16.630531" elapsed="6.810713">Element with locator '//input[@class="c"]' not found.</status>
+</kw>
+<kw name="close the browser" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-27T09:47:23.441244" elapsed="3.502280"/>
+</kw>
+<status status="PASS" start="2024-05-27T09:47:23.441244" elapsed="3.502280"/>
+</kw>
+<status status="FAIL" start="2024-05-27T09:46:54.682933" elapsed="32.260591">Element with locator '//input[@class="c"]' not found.</status>
+</test>
+<doc>To validate successful addition of stock item</doc>
+<status status="FAIL" start="2024-05-27T09:46:54.362214" elapsed="32.581310"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test validAddStockItem">Test validAddStockItem</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
