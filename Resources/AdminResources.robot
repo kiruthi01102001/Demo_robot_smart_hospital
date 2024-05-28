@@ -24,13 +24,13 @@ ${login_password}    css:input[id='loginpassword']
 ${login_btn}    xpath://button[text()='Log in']
 ${close_btn}    xpath://div[@id="logInModal"]/div/div/div[3]/button[1]
 ${doctor_field}    //span[@class="select2-selection__arrow"]
-${date_fld}    //input[@name="date"]
+${date_fld}    xpath://input[@class="form-control date"]
 ${search_button}    //button[@class="btn btn-primary btn-sm pull-right"]
 
 
 
 #for valid doctor wise search results
-${verify_text}   Records: 0 to 0 of 0
+${verify_text}  Records: 1 to 1 of 1
 ${search_result}     //div[@class="dataTables_info"]  
 
 #for form Queue search
@@ -51,6 +51,9 @@ ${patient_search}    //input[@class="form-control search-form search-form3"]
 ${patient_search_button}    (//button[@class="btn btn-flat"]/i)[1]
 ${table_value}    (//a[@class="btn btn-default btn-xs"])[1]
 
+${patient_search_reult}    //div[@class="dataTables_info"]
+${patient_result_text}    Records: 0 to 0 of 0
+
 #add stock item
 ${inventory}    //i[@class="fas fa-luggage-cart"]//parent::a
 ${item_stockList}    //div[@class="box-header ptbnull"]//h3
@@ -63,13 +66,15 @@ ${quantity}    (//input[@class="form-control miplusinput"])[1]
 ${puchase_price}    (//input[@name="purchase_price"])[1]
 ${date}    //input[@value="05/26/2024"]
 ${save_btn}    //button[@id="form1btn"]
-
-
+${date_in_appointment}    xpath://input[@class='form-control date']
+${date_value}    05/16/2024
+${invalid_search_loc}    (//span[@class="text-danger"])[1]    
+${invalid_search_text}    The Doctor field is required.
 
 
 *** Keywords ***
 Fill the appointment wise search form
-    [Arguments]    ${doctor_name}    ${date}
+    [Arguments]    ${doctor_name}   
     Click Element    ${doctor_field}
     ${list_of_elements}=    Get WebElements    //span[@class="select2-results"]//li
     ${options_texts}=    Create List
@@ -81,9 +86,13 @@ Fill the appointment wise search form
     END
     # Log    ${options_texts}
     # Log To Console    ${options_texts}
-    
-    # Click Element    ${date_fld}
-    Input Text    ${date_fld}    ${date} 
+
+Enter the date feild
+    Click Element  ${date_in_appointment}      
+    Input Text    ${date_in_appointment}    ${date_value}
+
+
+
 
        
 
@@ -116,12 +125,10 @@ Click Appoinment link
 
 
 Verify doctor wise appoinment search
-   Element Text Should Be   //div[text()="Records: 0 to 0 of 0"]      Records: 0 to 0 of 0  # ${verify_text}
-   Sleep    10s
+   Element Text Should Be   ${search_result}    ${verify_text}  
 
 Verify doctor wise appoinment search for invalid doctor name
-   Element Text Should Be    ${search_result}    ${verify_text}
-
+   Element Text Should Be   ${invalid_search_loc}    ${invalid_search_text}
 
 Fill the Queue form
     [Arguments]     ${doctor_name}  ${shift}  ${date}    ${slot}    
@@ -153,6 +160,9 @@ Enter patient name
 Verify the patient search details
     ${name}    Get Text    ${table_value}
     Should Be Equal As Strings    ${name}     Olivier Thomas (1)
+
+Verify invalid search results
+    Element Text Should Be    ${patient_search_reult}    ${patient_result_text}
 
 
 Click the inventory button

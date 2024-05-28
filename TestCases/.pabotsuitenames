@@ -1,0 +1,46 @@
+datasources:706414ebbc52f3fb92198452eb0b89bef4e3d829
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:0e02c91eb3eca1dde05953fd2bdaafb1e3eab73f
+--suite TestCases.Test Invalid Addnewpatient
+--suite TestCases.Test Invalid Billsearch
+--suite TestCases.Test Invalid Doctorlogin
+--suite TestCases.Test Invalid Languagechange
+--suite TestCases.Test Invalid Viewbillsearch
+--suite TestCases.Test Invalid search birth record
+--suite TestCases.Test Invalid search death record
+--suite TestCases.Test Invalid user appointment
+--suite TestCases.Test Valid Addnewpatient
+--suite TestCases.Test Valid Billsearch
+--suite TestCases.Test Valid Doctorlogin
+--suite TestCases.Test Valid Languagechange
+--suite TestCases.Test Valid Notificationdelete
+--suite TestCases.Test Valid Payment
+--suite TestCases.Test Valid Userlogin
+--suite TestCases.Test Valid Viewbilldetails
+--suite TestCases.Test add invalid birth record
+--suite TestCases.Test add invalid death record
+--suite TestCases.Test add valid birth record
+--suite TestCases.Test add valid death record
+--suite TestCases.Test appointment history
+--suite TestCases.Test empty user appointment
+--suite TestCases.Test invalid admin login
+--suite TestCases.Test invalid slot apointment
+--suite TestCases.Test invalidAppionmentSearch
+--suite TestCases.Test invalidPatientSearch
+--suite TestCases.Test invalidPostMessage
+--suite TestCases.Test invalidSendMsg
+--suite TestCases.Test invalisSendSMS
+--suite TestCases.Test valid appointment
+--suite TestCases.Test valid search birth record
+--suite TestCases.Test valid search death record
+--suite TestCases.Test valid user payment
+--suite TestCases.Test validAddStockItem
+--suite TestCases.Test validAdminLogin
+--suite TestCases.Test validAppionmentSearch
+--suite TestCases.Test validPatientSearch
+--suite TestCases.Test validPostMessage
+--suite TestCases.Test validQueueSearch
+--suite TestCases.Test validSendSMS
+--suite TestCases.Valid Search Birth Record
+--suite TestCases.Valid Search Death Record

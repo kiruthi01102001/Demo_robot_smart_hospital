@@ -84,6 +84,12 @@ ${publish_on}    (//input[@class="form-control date"])[2]
 ${send_btn}    (//div[@class="pull-right"])[2]/button
 ${sucess_msg}    //div[@class="alert alert-success"]
 ${verification_text}    Record Saved Successfully
+${invalid_date}
+${notification_date_error_msg_loc}    (//div[@class="col-md-3"]//span)[1]/p
+${notification_error_msg}    The Notice Date field is required.
+${msg-title_error_msg_loc}          (//div[@class="col-md-9"]//span)[1]/p
+${msg-title_error_msg_loc}      The Title field is required.
+
 
 #send sms form
 ${sms_page}    .pull-left.header
@@ -98,6 +104,10 @@ ${Pathologist_check_box}    (//input[@type="checkbox"])[8]
 ${Pharmacist_check_box}    (//input[@type="checkbox"])[7]
 ${assert_sms}    //div[@class="toast-message"]
 ${verification_text_invalid}    The Send Through field is required.
+
+${sms_body}    Hiiii all
+${template_id}    MSGID0001
+${title}    Gropu message to doctor,Pathologist,Pharmacy
  
 *** Keywords ***
 
@@ -246,6 +256,7 @@ assert value in death record
 Verify successful login of doctor
     Click Link    ${image_icon}
     # ${user_text}    Get Text    ${doctor_text_locator}
+    Wait Until Element Is Visible    ${doctor_text_locator}
     Element Text Should Be    ${doctor_text_locator}    Doctor
 
 
@@ -281,10 +292,10 @@ Verify send sms Page is opened
     Element Text Should Be    ${sms_page}     Send SMS
 
 Fill the send SMS form
-    Input Text    ${sms_title}    Gropu message to doctor,Pathologist,Pharmacy
-    Input Text    ${sms_template}    MSGID0001
+    Input Text    ${sms_title}    ${title}
+    Input Text    ${sms_template}    ${template_id}
     Click Element    ${sms_checkbox}
-    Input Text    ${text_area}    Hiiii all
+    Input Text    ${text_area}    ${sms_body}
     Click Element    ${admin_check_box}
     Click Element    ${doctor_check_box}
     Click Element    ${Pathologist_check_box}
@@ -295,17 +306,55 @@ To assert sucessfully message sent
     Element Text Should Be    ${assert_sms}    ${verification_text}
 
 To verify the unsucessful message sent
-    Element Text Should Be    ${assert_sms}    ${verification_text}
+    Element Text Should Be    ${assert_sms}    The Send Through field is required.
+
+# Fill post new message form
+#     Input Text    ${sms_title}    Gropu message to doctor,Pathologist,Pharmacy
+#     Input Text    ${sms_template}    MSGID0001
+#     # Click Element    ${sms_checkbox}
+#     Input Text    ${text_area}    Hiiii all
+#     Click Element    ${admin_check_box}
+#     Click Element    ${doctor_check_box}
+#     Click Element    ${Pathologist_check_box}
+#     Click Element    ${Pharmacist_check_box}
+#     Click Button    ${send_sms_btn}
 
 
-Fill the send SMS form using invalid details
-    Input Text    ${sms_title}    Gropu message to doctor,Pathologist,Pharmacy
-    Input Text    ${sms_template}    MSGID0001
-    # Click Element    ${sms_checkbox}
-    Input Text    ${text_area}    Hiiii all
+Fill post new message form using invalid notification date
+    [Arguments]
+        Input Text    ${title_locator}    To my friend
+        Select Frame    ${messaging_frame}
+        Click Element    ${msg_body}
+        Input Text    ${msg_body}    text=Hiiii! Sandhiya
+        Unselect Frame
+        Input Text    ${notice_date}    ${invalid_date}
+        Input Text    ${publish_on}    05/30/2024
+    
+Verify unsuccessful msg sent using invalid notification date
+    Element Text Should Be    ${notification_date_error_msg_loc}    ${notification_error_msg}
+
+
+Fill post new message form using invalid title
+
+        Input Text    ${title_locator}    ${invalid_date}
+        Select Frame    ${messaging_frame}
+        Click Element    ${msg_body}
+        Input Text    ${msg_body}    text=Hiiii! Sandhiya
+        Unselect Frame
+        Input Text    ${notice_date}    ${invalid_date}
+        Input Text    ${publish_on}    05/30/2024
+
+        
+Verify unsuccessful msg sent using invalid title
+    Element Text Should Be    ${notification_date_error_msg_loc}    ${notification_error_msg}
+
+
+Fill the send SMS form withought clicking send through 
+    Input Text    ${sms_title}    ${title}    ${title}
+    Input Text    ${sms_template}    ${template_id}
+    Input Text    ${text_area}    ${sms_body}
     Click Element    ${admin_check_box}
     Click Element    ${doctor_check_box}
     Click Element    ${Pathologist_check_box}
     Click Element    ${Pharmacist_check_box}
     Click Button    ${send_sms_btn}
-    

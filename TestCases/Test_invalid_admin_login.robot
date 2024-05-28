@@ -16,18 +16,20 @@ ${password}
 *** Test Cases *** 
 
 To validate invalid login of admin      ${username}    ${password}
+     [Tags]    confirmation
      [Documentation]   To verify search results of patient list
      
     
 *** Keywords ***
 
 To validate invalid login of admin
-    [Tags]    confirmation
+    
     [Arguments]    ${username}    ${password} 
     LoginResources.Go to user login
     LoginResources.Go to admin page
     Switch Window    new
     Log    Admin page Opened
     LoginResources.Fill the login form    ${username}    ${password} 
+    
 
 

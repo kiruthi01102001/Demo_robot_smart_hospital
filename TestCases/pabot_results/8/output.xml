@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-28T16:20:49.208689" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases">
+<suite id="s1-s1" name="Test Valid Addnewpatient" source="C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\Test_Valid_Addnewpatient.robot">
+<test id="s1-s1-t1" name="addition of new patient" line="16">
+<kw name="Open the browser with url" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:20:50.785275" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:20:50.784273" elapsed="5.853769"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:20:56.639319" level="INFO">Opening url 'https://demo.smart-hospital.in/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:20:56.638820" elapsed="2.641411"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-28T16:20:59.280731" elapsed="0.091137"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:20:59.372705" elapsed="0.002490"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:20:50.781793" elapsed="8.593402"/>
+</kw>
+<kw name="Successfull addition of new patient">
+<kw name="Click the login in button" owner="GenericResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:20:59.378206" level="INFO">Clicking element 'xpath://ul[@class="top-right"]//a'.</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:20:59.377211" elapsed="2.429386"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:20:59.376205" elapsed="2.430892"/>
+</kw>
+<kw name="Fill the successfull login form by clicking the doctor role" owner="LoginResources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:01.809145" level="INFO">Clicking link 'xpath://i[@class="fa fa-user"]//parent::a'.</msg>
+<arg>${admin_login_button}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:01.808609" elapsed="1.537389"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>new</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:03.345998" elapsed="0.066333"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:03.413441" level="INFO">Clicking link 'xpath://a[text()='Doctor']'.</msg>
+<arg>${valid_doctor_button}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:03.412490" elapsed="0.263683"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:03.676955" level="INFO">Clicking button 'css:button[class='btn']'.</msg>
+<arg>${signin_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:03.676426" elapsed="4.634390"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:01.807607" elapsed="6.503209"/>
+</kw>
+<kw name="Verify the successfull login with valid credentials for doctor" owner="LoginResources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:08.313046" level="INFO">Clicking link 'css:a[class="dropdown-toggle"]'.</msg>
+<arg>${pofile_icon}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:08.312317" elapsed="0.365279"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${profile_name}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-28T16:21:08.678095" elapsed="0.112408"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:08.791161" level="INFO">Verifying element 'css:div[class="sstopuser-test"] h5' contains exact text 'Doctor'.</msg>
+<arg>${profile_name}</arg>
+<arg>Doctor</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T16:21:08.790503" elapsed="0.086110"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:08.311319" elapsed="0.565294"/>
+</kw>
+<kw name="Addition of new patient in the IPD inpatient with valid Credentials" owner="DoctorResources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:08.878559" level="INFO">Clicking link 'xpath://i[@class="fas fa-procedures"]//parent::a'.</msg>
+<arg>${IPD_in_patient}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:08.878559" elapsed="1.235666"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:10.115229" level="INFO">Clicking link 'css:a[id="addp"]'.</msg>
+<msg time="2024-05-28T16:21:11.503018" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-28T16:21:11.503975" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a data-toggle="modal" onclick="holdModal('myModal')" id="addp" class="btn btn-primary btn-sm addpatient"&gt;...&lt;/a&gt; is not clickable at point (769, 85). Other element would receive the click: &lt;a data-target="modal" href="#" id="beddata" data-loading-text="&lt;i class='fa fa-spinner fa-spin '&gt;&lt;/i&gt; Cargando..." onclick="getbedstatus()"&gt;...&lt;/a&gt;
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF733061F22+60322]
+	(No symbol) [0x00007FF732FDCE99]
+	(No symbol) [0x00007FF732E97EBA]
+	(No symbol) [0x00007FF732EEF32E]
+	(No symbol) [0x00007FF732EECCF2]
+	(No symbol) [0x00007FF732EEA18B]
+	(No symbol) [0x00007FF732EE9356]
+	(No symbol) [0x00007FF732EDB491]
+	(No symbol) [0x00007FF732F0C21A]
+	(No symbol) [0x00007FF732EDADB6]
+	(No symbol) [0x00007FF732F0C430]
+	(No symbol) [0x00007FF732F2BC80]
+	(No symbol) [0x00007FF732F0BFC3]
+	(No symbol) [0x00007FF732ED9617]
+	(No symbol) [0x00007FF732EDA211]
+	GetHandleVerifier [0x00007FF73337946D+3301613]
+	GetHandleVerifier [0x00007FF7333C3693+3605267]
+	GetHandleVerifier [0x00007FF7333B9410+3563664]
+	GetHandleVerifier [0x00007FF7331142F6+790390]
+	(No symbol) [0x00007FF732FE74DF]
+	(No symbol) [0x00007FF732FE33D4]
+	(No symbol) [0x00007FF732FE3562]
+	(No symbol) [0x00007FF732FD2F6F]
+	BaseThreadInitThunk [0x00007FF95B897344+20]
+	RtlUserThreadStart [0x00007FF95CB026B1+33]
+</msg>
+<arg>${add_patient_button}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="FAIL" start="2024-05-28T16:21:10.114225" elapsed="1.393147">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a data-toggle="modal" onclick="holdModal('myModal')" id="addp" class="btn btn-primary btn-sm addpatient"&gt;...&lt;/a&gt; is not clickable at point (769, 85). Other element would receive the click: &lt;a data-target="modal" href="#" id="beddata" data-loading-text="&lt;i class='fa fa-spinner fa-spin '&gt;&lt;/i&gt; Cargando..." onclick="getbedstatus()"&gt;...&lt;/a&gt;
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF733061F22+60322]
+	(No symbol) [0x00007FF732FDCE99]
+	(No symbol) [0x00007FF732E97EBA]
+	(No symbol) [0x00007FF732EEF32E]
+	(No symbol) [0x00007FF732EECCF2]
+	(No symbol) [0x00007FF732EEA18B]
+	(No symbol) [0x00007FF732EE9356]
+	(No symbol) [0x00007FF732EDB491]
+	(No symbol) [0x00007FF732F0C21A]
+	(No symbol) [0x00007FF732EDADB6]
+	(No symbol) [0x00007FF732F0C430]
+	(No symbol) [0x00007FF732F2BC80]
+	(No symbol) [0x00007FF732F0BFC3]
+	(No symbol) [0x00007FF732ED9617]
+	(No symbol) [0x00007FF732EDA211]
+	GetHandleVerifier [0x00007FF73337946D+3301613]
+	GetHandleVerifier [0x00007FF7333C3693+3605267]
+	GetHandleVerifier [0x00007FF7333B9410+3563664]
+	GetHandleVerifier [0x00007FF7331142F6+790390]
+	(No symbol) [0x00007FF732FE74DF]
+	(No symbol) [0x00007FF732FE33D4]
+	(No symbol) [0x00007FF732FE3562]
+	(No symbol) [0x00007FF732FD2F6F]
+	BaseThreadInitThunk [0x00007FF95B897344+20]
+	RtlUserThreadStart [0x00007FF95CB026B1+33]
+</status>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>${new_patient_button}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-28T16:21:11.508774" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${name_field}</arg>
+<arg>${patient_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-28T16:21:11.508774" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${guardian_name_field}</arg>
+<arg>${guardian_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-28T16:21:11.508774" elapsed="0.001072"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${dob_field}</arg>
+<arg>${dob}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-28T16:21:11.509846" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${phone_number_field}</arg>
+<arg>${phone_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-28T16:21:11.509846" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${email_field}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-28T16:21:11.509846" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${address_field}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-28T16:21:11.509846" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${known_allergies_field}</arg>
+<arg>${known_allergies}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-28T16:21:11.509846" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${TPA_ID_field}</arg>
+<arg>${TPA_ID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-28T16:21:11.510846" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${TPA_validity_field}</arg>
+<arg>${TPA_Validity}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-28T16:21:11.510846" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${national_identity_number_field}</arg>
+<arg>${ni_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-28T16:21:11.510846" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${alternate_number_field}</arg>
+<arg>${alternate_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-28T16:21:11.510846" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${save_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-28T16:21:11.511846" elapsed="0.000000"/>
+</kw>
+<arg>${patient_name}</arg>
+<arg>${guardian_name}</arg>
+<arg>${dob}</arg>
+<arg>${bloodgroup}</arg>
+<arg>${marital_status}</arg>
+<arg>${phone_number}</arg>
+<arg>${email}</arg>
+<arg>${address}</arg>
+<arg>${known_allergies}</arg>
+<arg>${TPA_ID}</arg>
+<arg>${TPA_Validity}</arg>
+<arg>${ni_number}</arg>
+<arg>${alternate_number}</arg>
+<status status="FAIL" start="2024-05-28T16:21:08.876613" elapsed="2.635233">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a data-toggle="modal" onclick="holdModal('myModal')" id="addp" class="btn btn-primary btn-sm addpatient"&gt;...&lt;/a&gt; is not clickable at point (769, 85). Other element would receive the click: &lt;a data-target="modal" href="#" id="beddata" data-loading-text="&lt;i class='fa fa-spinner fa-spin '&gt;&lt;/i&gt; Cargando..." onclick="getbedstatus()"&gt;...&lt;/a&gt;
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF733061F22+60322]
+	(No symbol) [0x00007FF732FDCE99]
+	(No symbol) [0x00007FF732E97EBA]
+	(No symbol) [0x00007FF732EEF32E]
+	(No symbol) [0x00007FF732EECCF2]
+	(No symbol) [0x00007FF732EEA18B]
+	(No symbol) [0x00007FF732EE9356]
+	(No symbol) [0x00007FF732EDB491]
+	(No symbol) [0x00007FF732F0C21A]
+	(No symbol) [0x00007FF732EDADB6]
+	(No symbol) [0x00007FF732F0C430]
+	(No symbol) [0x00007FF732F2BC80]
+	(No symbol) [0x00007FF732F0BFC3]
+	(No symbol) [0x00007FF732ED9617]
+	(No symbol) [0x00007FF732EDA211]
+	GetHandleVerifier [0x00007FF73337946D+3301613]
+	GetHandleVerifier [0x00007FF7333C3693+3605267]
+	GetHandleVerifier [0x00007FF7333B9410+3563664]
+	GetHandleVerifier [0x00007FF7331142F6+790390]
+	(No symbol) [0x00007FF732FE74DF]
+	(No symbol) [0x00007FF732FE33D4]
+	(No symbol) [0x00007FF732FE3562]
+	(No symbol) [0x00007FF732FD2F6F]
+	BaseThreadInitThunk [0x00007FF95B897344+20]
+	RtlUserThreadStart [0x00007FF95CB026B1+33]
+</status>
+</kw>
+<kw name="Verify the successfull adding of new patient" owner="DoctorResources">
+<status status="NOT RUN" start="2024-05-28T16:21:11.511846" elapsed="0.000000"/>
+</kw>
+<arg>patient_name=prabu</arg>
+<arg>guardian_name=krish</arg>
+<arg>dob=05/29/2002</arg>
+<arg>bloodgroup=O+</arg>
+<arg>marital_status=Single</arg>
+<arg>phone_number=9977554433</arg>
+<arg>email=praburam@gmail.com</arg>
+<arg>address=kaveri avenu,amman nager,coimbatore-98</arg>
+<arg>known_allergies=voimiting</arg>
+<arg>TPA_ID=1876548</arg>
+<arg>TPA_Validity=2026-09-01 00:00:00</arg>
+<arg>ni_number=345678</arg>
+<arg>alternate_number=9876543456</arg>
+<status status="FAIL" start="2024-05-28T16:20:59.375195" elapsed="12.137652">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a data-toggle="modal" onclick="holdModal('myModal')" id="addp" class="btn btn-primary btn-sm addpatient"&gt;...&lt;/a&gt; is not clickable at point (769, 85). Other element would receive the click: &lt;a data-target="modal" href="#" id="beddata" data-loading-text="&lt;i class='fa fa-spinner fa-spin '&gt;&lt;/i&gt; Cargando..." onclick="getbedstatus()"&gt;...&lt;/a&gt;
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF733061F22+60322]
+	(No symbol) [0x00007FF732FDCE99]
+	(No symbol) [0x00007FF732E97EBA]
+	(No symbol) [0x00007FF732EEF32E]
+	(No symbol) [0x00007FF732EECCF2]
+	(No symbol) [0x00007FF732EEA18B]
+	(No symbol) [0x00007FF732EE9356]
+	(No symbol) [0x00007FF732EDB491]
+	(No symbol) [0x00007FF732F0C21A]
+	(No symbol) [0x00007FF732EDADB6]
+	(No symbol) [0x00007FF732F0C430]
+	(No symbol) [0x00007FF732F2BC80]
+	(No symbol) [0x00007FF732F0BFC3]
+	(No symbol) [0x00007FF732ED9617]
+	(No symbol) [0x00007FF732EDA211]
+	GetHandleVerifier [0x00007FF73337946D+3301613]
+	GetHandleVerifier [0x00007FF7333C3693+3605267]
+	GetHandleVerifier [0x00007FF7333B9410+3563664]
+	GetHandleVerifier [0x00007FF7331142F6+790390]
+	(No symbol) [0x00007FF732FE74DF]
+	(No symbol) [0x00007FF732FE33D4]
+	(No symbol) [0x00007FF732FE3562]
+	(No symbol) [0x00007FF732FD2F6F]
+	BaseThreadInitThunk [0x00007FF95B897344+20]
+	RtlUserThreadStart [0x00007FF95CB026B1+33]
+</status>
+</kw>
+<kw name="Close the browser" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:21:11.514810" elapsed="2.367713"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:11.512847" elapsed="2.369778"/>
+</kw>
+<status status="FAIL" start="2024-05-28T16:20:50.778492" elapsed="23.104133">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a data-toggle="modal" onclick="holdModal('myModal')" id="addp" class="btn btn-primary btn-sm addpatient"&gt;...&lt;/a&gt; is not clickable at point (769, 85). Other element would receive the click: &lt;a data-target="modal" href="#" id="beddata" data-loading-text="&lt;i class='fa fa-spinner fa-spin '&gt;&lt;/i&gt; Cargando..." onclick="getbedstatus()"&gt;...&lt;/a&gt;
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF733061F22+60322]
+	(No symbol) [0x00007FF732FDCE99]
+	(No symbol) [0x00007FF732E97EBA]
+	(No symbol) [0x00007FF732EEF32E]
+	(No symbol) [0x00007FF732EECCF2]
+	(No symbol) [0x00007FF732EEA18B]
+	(No symbol) [0x00007FF732EE9356]
+	(No symbol) [0x00007FF732EDB491]
+	(No symbol) [0x00007FF732F0C21A]
+	(No symbol) [0x00007FF732EDADB6]
+	(No symbol) [0x00007FF732F0C430]
+	(No symbol) [0x00007FF732F2BC80]
+	(No symbol) [0x00007FF732F0BFC3]
+	(No symbol) [0x00007FF732ED9617]
+	(No symbol) [0x00007FF732EDA211]
+	GetHandleVerifier [0x00007FF73337946D+3301613]
+	GetHandleVerifier [0x00007FF7333C3693+3605267]
+	GetHandleVerifier [0x00007FF7333B9410+3563664]
+	GetHandleVerifier [0x00007FF7331142F6+790390]
+	(No symbol) [0x00007FF732FE74DF]
+	(No symbol) [0x00007FF732FE33D4]
+	(No symbol) [0x00007FF732FE3562]
+	(No symbol) [0x00007FF732FD2F6F]
+	BaseThreadInitThunk [0x00007FF95B897344+20]
+	RtlUserThreadStart [0x00007FF95CB026B1+33]
+</status>
+</test>
+<doc>Test case to add new patient in the patient list</doc>
+<status status="FAIL" start="2024-05-28T16:20:49.254413" elapsed="24.628212"/>
+</suite>
+<status status="FAIL" start="2024-05-28T16:20:49.228134" elapsed="24.657393"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test Valid Addnewpatient">TestCases.Test Valid Addnewpatient</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

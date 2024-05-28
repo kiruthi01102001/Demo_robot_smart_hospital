@@ -1,0 +1,28 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Test Valid Payment :: Test case for the valid payment for a bill ...
+==============================================================================
+Successfull payment for the bill search                                 
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\Test_Valid_Payment.robot:11
+    T:  Successfull payment for the bill search    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\Test_Valid_Payment.robot:17
+      Successfull payment for the bill    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\Resources\UserResources.robot:93
+      Wait Until Element Is Enabled    ${payment_email_field}
+      |  ${payment_email_field} = css:div[class="emailInput input"] input[id='email'] (str)
+______________________________________________________________________________
+| FAIL |
+Element with locator 'css:div[class="emailInput input"] input[id='email']' not found.
+------------------------------------------------------------------------------
+TestCases.Test Valid Payment :: Test case for the valid payment fo... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\pabot_results\13\output.xml

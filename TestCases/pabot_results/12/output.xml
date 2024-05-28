@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-28T16:21:19.254456" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases">
+<suite id="s1-s1" name="Test Valid Notificationdelete" source="C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\Test_Valid_Notificationdelete.robot">
+<test id="s1-s1-t1" name="Sucsessfull deletion of notification message" line="13">
+<kw name="Open the browser with url" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:19.695452" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:21:19.690685" elapsed="3.912253"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:23.603945" level="INFO">Opening url 'https://demo.smart-hospital.in/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:21:23.603945" elapsed="3.972867"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-28T16:21:27.576812" elapsed="0.054668"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:21:27.631916" elapsed="0.002136"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:19.684257" elapsed="7.950359"/>
+</kw>
+<kw name="Click the login in button" owner="GenericResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:27.637379" level="INFO">Clicking element 'xpath://ul[@class="top-right"]//a'.</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:27.636117" elapsed="2.178795"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:27.635117" elapsed="2.180481"/>
+</kw>
+<kw name="Fill the successfull login form by clicking the doctor role" owner="LoginResources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:29.817000" level="INFO">Clicking link 'xpath://i[@class="fa fa-user"]//parent::a'.</msg>
+<arg>${admin_login_button}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:29.816595" elapsed="0.288325"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>new</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:30.104920" elapsed="0.020401"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:30.125822" level="INFO">Clicking link 'xpath://a[text()='Doctor']'.</msg>
+<arg>${valid_doctor_button}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:30.125321" elapsed="0.976278"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:31.102100" level="INFO">Clicking button 'css:button[class='btn']'.</msg>
+<arg>${signin_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:31.102100" elapsed="4.519263"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:29.816095" elapsed="5.805437"/>
+</kw>
+<kw name="Verify the successfull login with valid credentials for doctor" owner="LoginResources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:35.622942" level="INFO">Clicking link 'css:a[class="dropdown-toggle"]'.</msg>
+<arg>${pofile_icon}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:35.621532" elapsed="0.136283"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${profile_name}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-28T16:21:35.757815" elapsed="0.040894"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:35.800471" level="INFO">Verifying element 'css:div[class="sstopuser-test"] h5' contains exact text 'Doctor'.</msg>
+<arg>${profile_name}</arg>
+<arg>Doctor</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T16:21:35.798709" elapsed="0.045548"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:35.621532" elapsed="0.222725"/>
+</kw>
+<kw name="Delete the all notification message" owner="DoctorResources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:35.845034" level="INFO">Clicking link 'xpath://i[@class="fa fa-bell-o"]//parent::a'.</msg>
+<arg>${notification_icon}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:35.845034" elapsed="0.703642"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:36.549302" level="INFO">Clicking button 'xpath://i[@class="fa fa-trash"]//parent::button'.</msg>
+<msg time="2024-05-28T16:21:37.861245" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-28T16:21:37.861245" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button class="btn btn-primary btn-sm checkbox-toggle delete_all"&gt;...&lt;/button&gt; is not clickable at point (946, 85). Other element would receive the click: &lt;a href="https://demo.smart-hospital.in/admin/calendar/events" title="Calendario"&gt;...&lt;/a&gt;
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF733061F22+60322]
+	(No symbol) [0x00007FF732FDCE99]
+	(No symbol) [0x00007FF732E97EBA]
+	(No symbol) [0x00007FF732EEF32E]
+	(No symbol) [0x00007FF732EECCF2]
+	(No symbol) [0x00007FF732EEA18B]
+	(No symbol) [0x00007FF732EE9356]
+	(No symbol) [0x00007FF732EDB491]
+	(No symbol) [0x00007FF732F0C21A]
+	(No symbol) [0x00007FF732EDADB6]
+	(No symbol) [0x00007FF732F0C430]
+	(No symbol) [0x00007FF732F2BC80]
+	(No symbol) [0x00007FF732F0BFC3]
+	(No symbol) [0x00007FF732ED9617]
+	(No symbol) [0x00007FF732EDA211]
+	GetHandleVerifier [0x00007FF73337946D+3301613]
+	GetHandleVerifier [0x00007FF7333C3693+3605267]
+	GetHandleVerifier [0x00007FF7333B9410+3563664]
+	GetHandleVerifier [0x00007FF7331142F6+790390]
+	(No symbol) [0x00007FF732FE74DF]
+	(No symbol) [0x00007FF732FE33D4]
+	(No symbol) [0x00007FF732FE3562]
+	(No symbol) [0x00007FF732FD2F6F]
+	BaseThreadInitThunk [0x00007FF95B897344+20]
+	RtlUserThreadStart [0x00007FF95CB026B1+33]
+</msg>
+<arg>${delete_notification_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2024-05-28T16:21:36.548676" elapsed="1.319036">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button class="btn btn-primary btn-sm checkbox-toggle delete_all"&gt;...&lt;/button&gt; is not clickable at point (946, 85). Other element would receive the click: &lt;a href="https://demo.smart-hospital.in/admin/calendar/events" title="Calendario"&gt;...&lt;/a&gt;
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF733061F22+60322]
+	(No symbol) [0x00007FF732FDCE99]
+	(No symbol) [0x00007FF732E97EBA]
+	(No symbol) [0x00007FF732EEF32E]
+	(No symbol) [0x00007FF732EECCF2]
+	(No symbol) [0x00007FF732EEA18B]
+	(No symbol) [0x00007FF732EE9356]
+	(No symbol) [0x00007FF732EDB491]
+	(No symbol) [0x00007FF732F0C21A]
+	(No symbol) [0x00007FF732EDADB6]
+	(No symbol) [0x00007FF732F0C430]
+	(No symbol) [0x00007FF732F2BC80]
+	(No symbol) [0x00007FF732F0BFC3]
+	(No symbol) [0x00007FF732ED9617]
+	(No symbol) [0x00007FF732EDA211]
+	GetHandleVerifier [0x00007FF73337946D+3301613]
+	GetHandleVerifier [0x00007FF7333C3693+3605267]
+	GetHandleVerifier [0x00007FF7333B9410+3563664]
+	GetHandleVerifier [0x00007FF7331142F6+790390]
+	(No symbol) [0x00007FF732FE74DF]
+	(No symbol) [0x00007FF732FE33D4]
+	(No symbol) [0x00007FF732FE3562]
+	(No symbol) [0x00007FF732FD2F6F]
+	BaseThreadInitThunk [0x00007FF95B897344+20]
+	RtlUserThreadStart [0x00007FF95CB026B1+33]
+</status>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="NOT RUN" start="2024-05-28T16:21:37.868261" elapsed="0.000517"/>
+</kw>
+<status status="FAIL" start="2024-05-28T16:21:35.844756" elapsed="2.024523">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button class="btn btn-primary btn-sm checkbox-toggle delete_all"&gt;...&lt;/button&gt; is not clickable at point (946, 85). Other element would receive the click: &lt;a href="https://demo.smart-hospital.in/admin/calendar/events" title="Calendario"&gt;...&lt;/a&gt;
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF733061F22+60322]
+	(No symbol) [0x00007FF732FDCE99]
+	(No symbol) [0x00007FF732E97EBA]
+	(No symbol) [0x00007FF732EEF32E]
+	(No symbol) [0x00007FF732EECCF2]
+	(No symbol) [0x00007FF732EEA18B]
+	(No symbol) [0x00007FF732EE9356]
+	(No symbol) [0x00007FF732EDB491]
+	(No symbol) [0x00007FF732F0C21A]
+	(No symbol) [0x00007FF732EDADB6]
+	(No symbol) [0x00007FF732F0C430]
+	(No symbol) [0x00007FF732F2BC80]
+	(No symbol) [0x00007FF732F0BFC3]
+	(No symbol) [0x00007FF732ED9617]
+	(No symbol) [0x00007FF732EDA211]
+	GetHandleVerifier [0x00007FF73337946D+3301613]
+	GetHandleVerifier [0x00007FF7333C3693+3605267]
+	GetHandleVerifier [0x00007FF7333B9410+3563664]
+	GetHandleVerifier [0x00007FF7331142F6+790390]
+	(No symbol) [0x00007FF732FE74DF]
+	(No symbol) [0x00007FF732FE33D4]
+	(No symbol) [0x00007FF732FE3562]
+	(No symbol) [0x00007FF732FD2F6F]
+	BaseThreadInitThunk [0x00007FF95B897344+20]
+	RtlUserThreadStart [0x00007FF95CB026B1+33]
+</status>
+</kw>
+<kw name="Verify sucsessfull deletion of all notification messages" owner="DoctorResources">
+<status status="NOT RUN" start="2024-05-28T16:21:37.869778" elapsed="0.000497"/>
+</kw>
+<kw name="Close the browser" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:21:37.871762" elapsed="4.429099"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:37.870566" elapsed="4.430295"/>
+</kw>
+<status status="FAIL" start="2024-05-28T16:21:19.683773" elapsed="22.617088">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button class="btn btn-primary btn-sm checkbox-toggle delete_all"&gt;...&lt;/button&gt; is not clickable at point (946, 85). Other element would receive the click: &lt;a href="https://demo.smart-hospital.in/admin/calendar/events" title="Calendario"&gt;...&lt;/a&gt;
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF733061F22+60322]
+	(No symbol) [0x00007FF732FDCE99]
+	(No symbol) [0x00007FF732E97EBA]
+	(No symbol) [0x00007FF732EEF32E]
+	(No symbol) [0x00007FF732EECCF2]
+	(No symbol) [0x00007FF732EEA18B]
+	(No symbol) [0x00007FF732EE9356]
+	(No symbol) [0x00007FF732EDB491]
+	(No symbol) [0x00007FF732F0C21A]
+	(No symbol) [0x00007FF732EDADB6]
+	(No symbol) [0x00007FF732F0C430]
+	(No symbol) [0x00007FF732F2BC80]
+	(No symbol) [0x00007FF732F0BFC3]
+	(No symbol) [0x00007FF732ED9617]
+	(No symbol) [0x00007FF732EDA211]
+	GetHandleVerifier [0x00007FF73337946D+3301613]
+	GetHandleVerifier [0x00007FF7333C3693+3605267]
+	GetHandleVerifier [0x00007FF7333B9410+3563664]
+	GetHandleVerifier [0x00007FF7331142F6+790390]
+	(No symbol) [0x00007FF732FE74DF]
+	(No symbol) [0x00007FF732FE33D4]
+	(No symbol) [0x00007FF732FE3562]
+	(No symbol) [0x00007FF732FD2F6F]
+	BaseThreadInitThunk [0x00007FF95B897344+20]
+	RtlUserThreadStart [0x00007FF95CB026B1+33]
+</status>
+</test>
+<doc>Test case for valid delete all notification messages</doc>
+<status status="FAIL" start="2024-05-28T16:21:19.292627" elapsed="23.008234"/>
+</suite>
+<status status="FAIL" start="2024-05-28T16:21:19.270132" elapsed="23.030729"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test Valid Notificationdelete">TestCases.Test Valid Notificationdelete</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

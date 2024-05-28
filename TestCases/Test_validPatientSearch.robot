@@ -26,3 +26,6 @@ To verify sucessful search of patient list
     AdminResources.Enter patient name    ${patient_name}
     AdminResources.Verify the patient search details
 
+
+
+

@@ -1,0 +1,28 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Test Invalid Viewbillsearch :: Test case for the valid view bill ...
+==============================================================================
+Unsuccessfull view for a bill details                                   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\Test_Invalid_Viewbillsearch.robot:11
+    T:  Unsuccessfull view for a bill details    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\Test_Invalid_Viewbillsearch.robot:18
+      verify the unsuccessfull view of the bill details    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\Resources\UserResources.robot:87
+      Element Text Should Not Be    ${view_detail_assert}    Bill No : PHARMAB307
+      |  ${view_detail_assert} = xpath://h5[text()='Bill No : PHARMAB307'] (str)
+______________________________________________________________________________
+| FAIL |
+The text of element 'xpath://h5[text()='Bill No : PHARMAB307']' was not supposed to be 'Bill No : PHARMAB307'.
+------------------------------------------------------------------------------
+TestCases.Test Invalid Viewbillsearch :: Test case for the valid v... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\pabot_results\4\output.xml

@@ -1,0 +1,31 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Test add valid death record :: To validate the Login form           
+==============================================================================
+Login test template                                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\Test_add_valid_death_record.robot:18
+    T:  Login test template    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\Test_add_valid_death_record.robot:22
+      validate add death record    caseID=4723    DeathDate=2024-05-29 00:00:00    DeathReports=Dennis Coates
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\Test_add_valid_death_record.robot:30
+      click death record    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\Resources\DoctorResources.robot:202
+      Click Element    ${death_record}
+      |  ${death_record} = xpath://a[text()= ' Death Record'] (str)
+______________________________________________________________________________
+| FAIL |
+Element with locator 'xpath://a[text()= ' Death Record']' not found.
+------------------------------------------------------------------------------
+TestCases.Test add valid death record :: To validate the Login form   | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\pabot_results\19\output.xml

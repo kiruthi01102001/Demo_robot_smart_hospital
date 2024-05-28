@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-28T16:21:18.818473" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases">
+<suite id="s1-s1" name="Test Valid Languagechange" source="C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\Test_Valid_Languagechange.robot">
+<test id="s1-s1-t1" name="Successfull system language change" line="13">
+<kw name="Open the browser with url" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:19.137284" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:21:19.137284" elapsed="4.942872"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:24.080656" level="INFO">Opening url 'https://demo.smart-hospital.in/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:21:24.080156" elapsed="4.171332"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-28T16:21:28.251888" elapsed="0.035798"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:21:28.288185" elapsed="0.002544"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:19.137284" elapsed="9.153445"/>
+</kw>
+<kw name="Click the login in button" owner="GenericResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:28.293237" level="INFO">Clicking element 'xpath://ul[@class="top-right"]//a'.</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:28.292128" elapsed="3.235704"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:28.291424" elapsed="3.236908"/>
+</kw>
+<kw name="Fill the successfull login form by clicking the doctor role" owner="LoginResources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:31.529833" level="INFO">Clicking link 'xpath://i[@class="fa fa-user"]//parent::a'.</msg>
+<arg>${admin_login_button}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:31.529332" elapsed="0.406748"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>new</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:31.936579" elapsed="0.024328"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:31.961407" level="INFO">Clicking link 'xpath://a[text()='Doctor']'.</msg>
+<arg>${valid_doctor_button}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:31.961407" elapsed="1.919673"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:33.882082" level="INFO">Clicking button 'css:button[class='btn']'.</msg>
+<arg>${signin_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:33.881080" elapsed="4.672418"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:31.528332" elapsed="7.025166"/>
+</kw>
+<kw name="Verify the successfull login with valid credentials for doctor" owner="LoginResources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:38.554505" level="INFO">Clicking link 'css:a[class="dropdown-toggle"]'.</msg>
+<arg>${pofile_icon}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:38.554505" elapsed="0.147003"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${profile_name}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-28T16:21:38.701508" elapsed="0.054139"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:38.756657" level="INFO">Verifying element 'css:div[class="sstopuser-test"] h5' contains exact text 'Doctor'.</msg>
+<arg>${profile_name}</arg>
+<arg>Doctor</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T16:21:38.755647" elapsed="0.048267"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:38.553498" elapsed="0.250416"/>
+</kw>
+<kw name="Change the valid system language" owner="DoctorResources">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${language_icon}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-28T16:21:38.804923" elapsed="0.073215"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:38.879331" level="INFO">Clicking button 'xpath://button[@class="btn dropdown-toggle selectpicker btn-default"]'.</msg>
+<arg>${language_icon}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:38.878638" elapsed="0.138169"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:39.017820" level="INFO">Clicking link 'xpath://a[normalize-space()='Hindi']'.</msg>
+<arg>${valid_hindi_language}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:39.016807" elapsed="0.210589"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:38.803914" elapsed="0.423482"/>
+</kw>
+<kw name="Verify the successfull sytem language change" owner="DoctorResources">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${language_icon}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-28T16:21:39.229015" elapsed="0.078191"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:39.349944" level="INFO">${result} = Hindi
+ </msg>
+<var>${result}</var>
+<arg>${language_icon}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:21:39.307698" elapsed="0.042246"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Hindi</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-05-28T16:21:39.349944" elapsed="0.001011"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:39.227903" elapsed="0.123052"/>
+</kw>
+<kw name="Close the browser" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:21:39.351954" elapsed="2.948907"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:39.350955" elapsed="2.949906"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:19.137284" elapsed="23.163577"/>
+</test>
+<doc>Test case for the valid system language change</doc>
+<status status="PASS" start="2024-05-28T16:21:18.861027" elapsed="23.439834"/>
+</suite>
+<status status="PASS" start="2024-05-28T16:21:18.836483" elapsed="23.464378"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Valid Languagechange">TestCases.Test Valid Languagechange</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

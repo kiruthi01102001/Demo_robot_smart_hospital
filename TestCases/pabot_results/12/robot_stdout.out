@@ -1,0 +1,55 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Test Valid Notificationdelete :: Test case for valid delete all n...
+==============================================================================
+Sucsessfull deletion of notification message                            
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\Test_Valid_Notificationdelete.robot:13
+    T:  Sucsessfull deletion of notification message    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\Test_Valid_Notificationdelete.robot:17
+      Delete the all notification message    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\Resources\DoctorResources.robot:155
+      Click Button    ${delete_notification_button}
+      |  ${delete_notification_button} = xpath://i[@class="fa fa-trash"]//parent::button (str)
+______________________________________________________________________________
+| FAIL |
+ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn btn-primary btn-sm checkbox-toggle delete_all">...</button> is not clickable at point (946, 85). Other element would receive the click: <a href="https://demo.smart-hospital.in/admin/calendar/events" title="Calendario">...</a>
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF733061F22+60322]
+	(No symbol) [0x00007FF732FDCE99]
+	(No symbol) [0x00007FF732E97EBA]
+	(No symbol) [0x00007FF732EEF32E]
+	(No symbol) [0x00007FF732EECCF2]
+	(No symbol) [0x00007FF732EEA18B]
+	(No symbol) [0x00007FF732EE9356]
+	(No symbol) [0x00007FF732EDB491]
+	(No symbol) [0x00007FF732F0C21A]
+	(No symbol) [0x00007FF732EDADB6]
+	(No symbol) [0x00007FF732F0C430]
+	(No symbol) [0x00007FF732F2BC80]
+	(No symbol) [0x00007FF732F0BFC3]
+	(No symbol) [0x00007FF732ED9617]
+	(No symbol) [0x00007FF732EDA211]
+	GetHandleVerifier [0x00007FF73337946D+3301613]
+	GetHandleVerifier [0x00007FF7333C3693+3605267]
+	GetHandleVerifier [0x00007FF7333B9410+3563664]
+	GetHandleVerifier [0x00007FF7331142F6+790390]
+	(No symbol) [0x00007FF732FE74DF]
+	(No symbol) [0x00007FF732FE33D4]
+	(No symbol) [0x00007FF732FE3562]
+	(No symbol) [0x00007FF732FD2F6F]
+	BaseThreadInitThunk [0x00007FF95B897344+20]
+	RtlUserThreadStart [0x00007FF95CB026B1+33]
+------------------------------------------------------------------------------
+TestCases.Test Valid Notificationdelete :: Test case for valid del... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\pabot_results\12\output.xml

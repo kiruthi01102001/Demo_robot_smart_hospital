@@ -1,0 +1,30 @@
+==============================================================================
+TestCases                                                                     
+==============================================================================
+TestCases.Test invalid slot apointment :: To validate the user apointment     
+==============================================================================
+user appointment                                                        
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\Test_invalid_slot_apointment.robot:18
+    T:  user appointment    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\Test_invalid_slot_apointment.robot:22
+      validate the invalid slot in user appointment    Date_data=2024-02-05 00:00:00    Message_data=suffering from stomach pain    adress=jayanagar
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\Test_invalid_slot_apointment.robot:31
+      alert accpet    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\Resources\UserResources.robot:154
+      Handle Alert    ACCEPT
+______________________________________________________________________________
+| FAIL |
+Alert not found in 5 seconds.
+------------------------------------------------------------------------------
+TestCases.Test invalid slot apointment :: To validate the user apo... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestCases                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\pabot_results\23\output.xml

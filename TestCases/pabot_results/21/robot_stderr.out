@@ -1,0 +1,2 @@
+[ ERROR ] Calling method 'end_keyword' of listener 'RobotStackTracer' failed: UnicodeEncodeError: 'charmap' codec can't encode character '\u200e' in position 542: character maps to <undefined>
+[ ERROR ] Calling method 'end_keyword' of listener 'RobotStackTracer' failed: UnicodeEncodeError: 'charmap' codec can't encode character '\u200e' in position 542: character maps to <undefined>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-28T16:21:48.408241" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases" source="C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases">
+<suite id="s1-s1" name="Test Valid Userlogin" source="C:\Users\91989\Desktop\New folder\Pilot_Project_Smart_hospital_Team3\TestCases\Test_Valid_Userlogin.robot">
+<test id="s1-s1-t1" name="Successful patient login by the default login credentials" line="12">
+<kw name="Open the browser with url" owner="GenericResources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:49.185610" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-28T16:21:49.185109" elapsed="8.772211"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:21:57.958505" level="INFO">Opening url 'https://demo.smart-hospital.in/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-28T16:21:57.957775" elapsed="0.644611"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-28T16:21:58.602386" elapsed="2.087024"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-28T16:22:00.689410" elapsed="0.001180"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:49.183210" elapsed="11.508380"/>
+</kw>
+<kw name="Click the login in button" owner="GenericResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:22:00.692589" level="INFO">Clicking element 'xpath://ul[@class="top-right"]//a'.</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:22:00.691590" elapsed="1.725590"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:22:00.691590" elapsed="1.725590"/>
+</kw>
+<kw name="Fill the login form by default credentials for user role" owner="LoginResources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:22:02.418968" level="INFO">Clicking button 'css:button[class='btn']'.</msg>
+<arg>${signin_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:22:02.418190" elapsed="4.305847"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:22:02.417180" elapsed="4.306857"/>
+</kw>
+<kw name="Verify the successfull login with valid credentials for user" owner="LoginResources">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:22:06.724742" level="INFO">Clicking link 'css:a[class="dropdown-toggle"]'.</msg>
+<arg>${pofile_icon}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-28T16:22:06.724742" elapsed="0.398696"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${profile_name}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-05-28T16:22:07.123937" elapsed="0.063631"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-28T16:22:07.188513" level="INFO">Verifying element 'css:div[class="sstopuser-test"] h5' contains exact text 'Patient'.</msg>
+<arg>${profile_name}</arg>
+<arg>Patient</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-28T16:22:07.188068" elapsed="0.054281"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:22:06.724742" elapsed="0.518107"/>
+</kw>
+<kw name="Close the browser" owner="GenericResources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-28T16:22:07.244375" elapsed="2.603851"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:22:07.243293" elapsed="2.604933"/>
+</kw>
+<status status="PASS" start="2024-05-28T16:21:49.180644" elapsed="20.667582"/>
+</test>
+<doc>Test case for the valid user login</doc>
+<status status="PASS" start="2024-05-28T16:21:48.484723" elapsed="21.364504"/>
+</suite>
+<status status="PASS" start="2024-05-28T16:21:48.454893" elapsed="21.394836"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Valid Userlogin">TestCases.Test Valid Userlogin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
